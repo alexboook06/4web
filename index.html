@@ -1,0 +1,71 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" name="termux,kalilinux,android,hacking,virtualbox,html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="aprendiendo termux,aprendiendo kalilinux,hackinh,aprendiendo virtualbox">
+    <meta name="author" content="Aprendiendotermux">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COMO RESOLVER SIGNAL 9</title>
+  <style>
+        body {
+            background-color: #111111;
+            color: white; /* Cambia el color del texto a blanco */
+        }
+    </style>
+    <title>COMO RESOLVER EL PROBLEMA DE CONEXION DE LAS MAQUINAS VIRTUALES</title>
+
+</head>
+  <body>
+    <a href="https://alexboook06.github.io/1web"><img src="InShot_20240414_062917150.png" alt="imagen centrada"style="max-width:100%; height:auto;"></a>
+    <hr>
+    <h1>COMO RESOLVER EL PROBLEMA DE CONEXION DE LAS MAQUINAS VIRTUALES</h1>
+    <br>
+    <p>Lo primero para poder resolver este problema nececitamos instalar el paquete 
+    <h3>pkg install android-tools</h3>
+    <img src="1.png" alt="adb" style="max-width:100%; height:auto;">
+    ya instalado lo siguiente que haremos es activar las opciones de desarrollador en nuestro dispocitivo y activar la depuracion inalambrica 
+    <img src="2.png" alt="depuracion inalambrica" style="max-width:100%; height:auto;">
+    <br>
+    <br>
+    <br>
+    <br>
+    ya activada la depuracion inalambrica diviremos pantalla arriba con el codigo de vinculacion y abajo la consolade termux
+    <img src="3.png" alt="termux" style="max-width:100%; height:auto;">
+    ahora pincharemos en donde dice vincular dispocitivo con codigo de sincronizacion
+    <img src="4.jpg" alt="termux" style="max-width:100%; height:auto;">
+    ya que nos salga la leyenda con el codigo de vinculacion ahora en termux ejecutaremos <h3>adb pair localhost:<br><br>aqui ponemos el puerto y el codigo de vinculacion</h3>
+    <img src="5.jpg" alt="termux" style="max-width:100%; height:auto;">
+    <img src="6.jpg" alt="termux" style="max-width:100%; height:auto;">
+    ya ejecutado el anterior comando con los datos requeridos ahora ejecutaremos
+    <h3>adb connect localhost:<br><br>aqui ponemos el puerto que parece abajo de nombre de el dispocitivo </h3>
+    con ese comando ya se nos conectaria a adb
+    <img src="7.jpg" alt="termux" style="max-width:100%; height:auto;">
+    en donde dice el puerto para que se conecte adb hay colocaremos el puerto que aparece en la siguiente imagen
+    <img src="8.jpg" alt="termux" style="max-width:100%; height:auto;">
+    ya conectado ejecutaremos 
+    <h3>adb devices</h3>
+    para comprobar si se conecto correctamente
+    <img src="9.jpg" alt="termux" style="max-width:100%; height:auto;">
+    <img src="10.jpg" alt="termux" style="max-width:100%; height:auto;">
+    ya comprovada la coneccion ahora ejecutaremos los siguientes comandos
+    <h3>adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"</h3>
+    <br>
+    <h3>adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"</h3>
+    <br>
+    <h3>adb shell settings put global settings_enable_monitor_phantom_procs false</h3>
+    ya ejecutados los anteriores comandos en termux estaria resuelto el problema de coneccion de las maquinas virtuales,ya puedes desactivar la depuracion inalambrica
+    <br>
+    <br>
+    si no entediste algunas de las indicaciones puedes apoyarte de este video 
+    <a href="https://youtu.be/aru93O0Ul-o?si=1mbGgKC9s24lF89e">click aqui para ver el video</a>
+
+    </p>
+
+    </body>
+
+    </html>
